@@ -1,0 +1,67 @@
+CREATE DATABASE hotel_reservation_system;
+USE hotel_reservation_system;
+
+CREATE TABLE Guests (
+    guest_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(25),
+    last_name VARCHAR(25),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(150),
+    phone VARCHAR(20)
+);
+
+ALTER TABLE `guests` AUTO_INCREMENT = 10000;
+
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(150),
+    role ENUM('admin', 'staff') NOT NULL
+);
+
+ALTER TABLE `users` AUTO_INCREMENT = 1000;
+
+CREATE TABLE Rooms (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_type ENUM('Double', 'Single', 'Suite'),
+    photo VARCHAR(255),
+    price DECIMAL(10,2),
+    availability ENUM('available', 'reserved', 'checked-in') DEFAULT 'available'
+);
+
+ALTER TABLE `rooms` AUTO_INCREMENT = 100;
+
+CREATE TABLE Reservations (
+    reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+    guest_id INT NOT NULL,
+    room_id INT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    total_price DECIMAL(10,2),
+    checked_in BOOLEAN DEFAULT 0,
+    checked_out BOOLEAN DEFAULT 0,
+    payment_status ENUM('paid', 'unpaid') DEFAULT 'unpaid',
+    FOREIGN KEY (guest_id) REFERENCES Guests(guest_id) ON DELETE CASCADE,
+    FOREIGN KEY (room_id) REFERENCES Rooms(room_id) ON DELETE CASCADE
+);
+
+ALTER TABLE `reservations` AUTO_INCREMENT = 1000000;
+
+CREATE TABLE Payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    reservation_id INT,
+    amount_paid DECIMAL(10,2),
+    payment_method ENUM('card', 'cash', 'online') NOT NULL,
+    payment_date DATE,
+    FOREIGN KEY (reservation_id) REFERENCES Reservations(reservation_id) ON DELETE CASCADE
+);
+
+ALTER TABLE `payments` AUTO_INCREMENT = 100000;
+
+INSERT INTO `users` (`username`, `password`, `role`) VALUES ('Administrator','password','admin');
+
+INSERT INTO `rooms` (`room_type`, `photo`, `price`, `availability`) VALUES ('Double', 'p1', '500', 'available'), ('Double', 'p2', '500', 'available'), ('Double', 'p3', '600', 'available'), ('Double', 'p4', '600', 'available'), ('Double', 'p5', '700', 'available'), ('Double', 'p6', '650', 'available'), ('Double', 'p7', '650', 'available'), ('Double', 'p8', '700', 'available'), ('Double', 'p9', '700', 'available'), ('Double', 'p10', '800', 'available'), ('Double', 'p11', '800', 'available'), ('Double', 'p12', '800', 'available'), ('Double', 'p13', '850', 'available'), ('Double', 'p14', '900', 'available'), ('Double', 'p15', '900', 'available'), ('Double', 'p16', '950', 'available'), ('Double', 'p17', '950', 'available'), ('Double', 'p18', '1000', 'available'), ('Double', 'p19', '1000', 'available'), ('Double', 'p20', '1000', 'available'), ('Suite', 'q1', '1650', 'available'), ('Suite', 'q2', '1650', 'available'), ('Suite', 'q3', '1700', 'available'), ('Suite', 'q4', '1750', 'available'), ('Suite', 'q5', '1800', 'available'), ('Suite', 'q6', '1800', 'available'), ('Suite', 'q7', '1850', 'available'), ('Suite', 'q8', '2000', 'available'), ('Suite', 'q9', '2000', 'available'), ('Suite', 'q10', '2100', 'available'), ('Suite', 'q11', '2150', 'available'), ('Suite', 'q12', '2250', 'available'), ('Single', 'r1', '350', 'available'), ('Single', 'r2', '650', 'available');
+
+
+
+

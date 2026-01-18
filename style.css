@@ -1,0 +1,237 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+header nav a:hover {
+    background-color: #45a049;
+}
+
+h1, h2 {
+    color: #333;
+    font-size: 2em; /* Explicit sizing for headings */
+}
+
+/* Form Styling */
+.insert-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px; /* Standardized radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px; /* More consistent spacing */
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-input {
+    width: 95%;
+    padding: 10px; /* Standardized padding */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Standardized radius */
+    box-sizing: border-box;
+}
+
+.form-button {
+    width: 95%;
+    padding: 12px; /* Slightly increased for consistency */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Standardized radius */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px; /* Consistent padding */
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/index.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: orangered;
+    font-size: 1.2em;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 20px; /* More consistent with form buttons */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Standardized radius */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Reservation Form */
+.form-container {
+    max-width: 650px;
+    height: 100%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Standardized radius */
+}
+/* Confirmation Page */
+.main-container {
+    padding: 50px;
+    background-color: white;
+    max-width: 650px;
+    margin: 100px auto;
+    border-radius: 5px; /* Standardized radius */
+}
+.main2-container {
+    padding: 50px;
+    background-color: #f4f4f4;
+    max-width: 650px;
+    margin: 100px auto;
+    border-radius: 5px; /* Standardized radius */
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Standardized radius */
+}
+
+button[type="submit"], button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px; /* Consistent padding */
+    border: none;
+    border-radius: 5px; /* Standardized radius */
+    cursor: pointer;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+/* Confirmation Page */
+.confirmation-container {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 5px; /* Standardized radius */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Styling for checkboxes and labels */
+.constraints-group {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    width: auto;             /* Let checkbox take default width */
+    height: auto;            /* Let checkbox take default height */
+    margin-right: 10px;      /* Add space between checkbox and label */
+}
+
+label {
+    font-size: 16px;         /* Adjust label font size if needed */
+    margin-right: 20px;      /* Add space between labels */
+}
