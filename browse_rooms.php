@@ -32,7 +32,7 @@ $result = $conn->query($sql);
     <section>
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="room">
-                <img src="images/<?php echo $row['photo']; ?>" alt="<?php echo $row['room_type']; ?>">
+                <img src="images/<?php echo $row['photo']; ?>.jpg" alt="<?php echo $row['room_type']; ?>">
                 <h2>Room <?php echo $row['room_id']; ?></h2>
                 <p>Price: R<?php echo $row['price']; ?></p>
                 <a href="reserve.php?room_id=<?php echo $row['room_id']; ?>" class="btn">Reserve Now</a>
@@ -46,4 +46,5 @@ $result = $conn->query($sql);
         <p>Contact: 063 461 3389 | Email: <a href="mailto:paradisehotel@pdh.ac.za" style="color: #fff;">paradisehotel@pdh.ac.za</a></p>
     </footer>
 </body>
+
 </html>
