@@ -30,7 +30,7 @@ $result = $conn->query($sql);
     <section>
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="room">
-                <img src="images/<?php echo $row['photo']; ?>" alt="<?php echo $row['room_type']; ?>">
+                <img src="images/<?php echo $row['photo']; ?>.jpg" alt="<?php echo $row['room_type']; ?>">
                 <h2>Room <?php echo $row['room_id']; ?></h2>
                 <p>Price: R<?php echo $row['price']; ?></p>
                 <hr><hr>
@@ -44,4 +44,5 @@ $result = $conn->query($sql);
     </footer>
 </body>
 </html>
+
 ?>
