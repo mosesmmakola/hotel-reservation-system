@@ -128,8 +128,9 @@ Sol Plaatje University
 
 ---
 
-![admin](screenshots/admin.png)
-![browse](screenshots/browse.png)
 ![home](screenshots/home.png)
 ![login](screenshots/login.png)
+![admin](screenshots/admin.png)
 ![tables](screenshots/tables.png)
+![browse](screenshots/browse.png)
+
